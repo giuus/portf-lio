@@ -37,7 +37,7 @@
 
   // animação de entrada (só com IntersectionObserver e sem redução de movimento)
   if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = document.querySelectorAll('.sec__head, .prod, .mini, .skill, .timeline li, .ia__list li, .about > *, .cta__in');
+  var els = document.querySelectorAll('.sec__head, .prod, .ramo, .mini, .skill, .timeline li, .ia__list li, .about > *, .cta__in');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) {
       if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
